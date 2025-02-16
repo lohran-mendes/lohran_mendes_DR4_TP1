@@ -11,3 +11,10 @@
 
 // Implemente da forma mais simples e objetiva possível.
 // Não use estruturas de controle de repetição.
+const planetasIniciais = ["Mercúrio", "Vênus", "Terra", "Marte", "Júpiter"]
+const planetasRestantes = ["Saturno", "Urano", "Netuno"]
+const todosPlanetas = planetasIniciais.concat(planetasRestantes);
+alert("Array dos planetas:\n" + todosPlanetas)
+todosPlanetas.shift()
+todosPlanetas.pop()
+alert("Array dos planetas restantes:\n" + todosPlanetas)

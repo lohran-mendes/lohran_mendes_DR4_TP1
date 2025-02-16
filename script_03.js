@@ -11,3 +11,9 @@
 
 // Implemente da forma mais simples e objetiva possível.
 // Não use estruturas de controle de repetição.
+const itens = ["Recife", "Belém", "Brasília", "Curitiba", "Vitória", "Rio de Janeiro"]
+alert('Exibindo os itens do array:\n' + itens)
+itens.push("São Paulo", "Petrópolis")
+alert('Exibindo os itens do array:\n' + itens)
+itens.splice(3, 0, "Gramado", "Cuiabá");
+alert('Exibindo os itens do array:\n' + itens)

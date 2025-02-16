@@ -9,3 +9,8 @@
 
 // Implemente da forma mais simples e objetiva possível.
 // Não use estruturas de controle de repetição.
+const itens = ["Martelo", "Chave de Fenda", "Serrote", "Alicate", "Formão"]
+alert('Exibindo os itens do array:\n' + itens)
+itens[0] = "Chave Inglesa";
+itens[itens.length - 1] = "Trena";
+alert('Exibindo os itens do array:\n' + itens)
