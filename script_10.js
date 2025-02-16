@@ -9,3 +9,12 @@
 
 // Implemente da forma mais simples e objetiva possível.
 // Não use estruturas de controle de repetição.
+const qualidades = ['justiça', 'persistência', 'otimismo', 'humildade', 'bondade', 'compaixão', 'empatia', 'perdão', 'honestidade', 'disciplina', 'coragem']
+
+exibirFrasePadrao(qualidades)
+qualidades.sort(() => Math.random() - 0.5)
+exibirFrasePadrao(qualidades)
+
+function exibirFrasePadrao(entrada){
+alert(`${entrada[2]} é uma qualidade muito boa para qualquer tipo de pessoa`)
+}

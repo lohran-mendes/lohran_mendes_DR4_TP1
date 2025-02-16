@@ -11,3 +11,18 @@
 
 // Implemente da forma mais simples e objetiva possível.
 // Não use estruturas de controle de repetição.
+const paises = [
+  "Dinamarca",
+  "Inglaterra",
+  "Portugal",
+  "Noruega",
+  "Espanha",
+  "Alemanha",
+  "França",
+  "Itália",
+];
+alert("Exibindo a lista dos países:\n" + paises);
+paises.sort();
+alert("Exibindo a lista dos países ordenados de forma ascendente:\n" + paises);
+paises.sort().reverse();
+alert("Exibindo a lista dos países ordenados de forma descendente:\n" + paises);
