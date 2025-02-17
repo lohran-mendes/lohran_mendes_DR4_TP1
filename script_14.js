@@ -7,3 +7,16 @@
 // Não use estruturas de controle de repetição.
 // Use somente as funções aprendidas nas etapas 1 e 2.
 // Implemente um script demonstre a implementação.
+const numerosComDuplicatas = [1, 2, 2, 3, 3, 4, 5, 6, 7, 4, 5, 6, 6, 8, 10];
+const numerosSemDuplicatas = removeDuplicatas(numerosComDuplicatas)
+
+alert('Demonstrando o array original \n' + numerosComDuplicatas)
+alert('Demonstrando o array sem as duplicatas \n' + numerosSemDuplicatas)
+
+function removeDuplicatas(array){
+   let arrayRetornado = array.filter((elemento, indice, lista) => {
+    if(lista.indexOf(elemento) == indice)
+        return elemento
+   })
+   return arrayRetornado
+}
