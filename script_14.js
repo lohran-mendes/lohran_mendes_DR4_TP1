@@ -8,15 +8,17 @@
 // Use somente as funções aprendidas nas etapas 1 e 2.
 // Implemente um script demonstre a implementação.
 const numerosComDuplicatas = [1, 2, 2, 3, 3, 4, 5, 6, 7, 4, 5, 6, 6, 8, 10];
-const numerosSemDuplicatas = removeDuplicatas(numerosComDuplicatas)
+const numerosSemDuplicatas = removeDuplicatas(numerosComDuplicatas);
 
-alert('Demonstrando o array original \n' + numerosComDuplicatas)
-alert('Demonstrando o array sem as duplicatas \n' + numerosSemDuplicatas)
+alert("Demonstrando o array original \n" + numerosComDuplicatas);
+alert("Demonstrando o array sem as duplicatas \n" + numerosSemDuplicatas);
 
-function removeDuplicatas(array){
-   let arrayRetornado = array.filter((elemento, indice, lista) => {
-    if(lista.indexOf(elemento) == indice)
-        return elemento
-   })
-   return arrayRetornado
+function removeDuplicatas(array) {
+  if (Array.isArray(array)) {
+    let arrayRetornado = array.filter((elemento, indice, lista) => {
+      if (lista.indexOf(elemento) == indice) return elemento;
+    });
+    return arrayRetornado;
+  } else
+    return "Os argumentos dessa função não foram satisfeitos, é necessário entrar com um array";
 }

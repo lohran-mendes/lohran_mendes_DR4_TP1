@@ -9,12 +9,34 @@
 
 // Implemente da forma mais simples e objetiva possível.
 // Não use estruturas de controle de repetição.
-const qualidades = ['justiça', 'persistência', 'otimismo', 'humildade', 'bondade', 'compaixão', 'empatia', 'perdão', 'honestidade', 'disciplina', 'coragem']
+const qualidades = [
+  "justiça",
+  "persistência",
+  "otimismo",
+  "humildade",
+  "bondade",
+  "compaixão",
+  "empatia",
+  "perdão",
+  "honestidade",
+  "disciplina",
+  "coragem",
+];
 
-exibirFrasePadrao(qualidades)
-qualidades.sort(() => Math.random() - 0.5)
-exibirFrasePadrao(qualidades)
+exibirFrasePadrao(qualidades);
+qualidades.sort(() => Math.random() - 0.5);
+exibirFrasePadrao(qualidades);
 
-function exibirFrasePadrao(entrada){
-alert(`${entrada[2]} é uma qualidade muito boa para qualquer tipo de pessoa`)
+function exibirFrasePadrao(entrada) {
+  if (Array.isArray(entrada) && entrada.length >= 3 && entrada[2] && typeof entrada[2] === 'string') {
+    alert(
+      `${entrada[2]} é uma qualidade muito boa para qualquer tipo de pessoa`
+    );
+  } else if (Array.isArray(entrada) && entrada.length >= 3) {
+    alert(`A palavra no índice 2 do array não é válida`);
+  } else if (Array.isArray(entrada) && entrada.length < 3) {
+    alert(
+      `A entrada não tem pelo menos 3 itens para usar a palavra que está no índice 2.`
+    );
+  } else alert(`A entrada não é um Array`);
 }

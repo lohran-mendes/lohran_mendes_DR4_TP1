@@ -22,8 +22,12 @@ alert("clone 1 \n" + clone1);
 alert("clone 2 \n" + clone2);
 
 function clonaArray1(array) {
-  return [...array];
+  if (Array.isArray(array)) {
+    return [...array];
+  } else return "Não foi passado um array como argumento.";
 }
 function clonaArray2(array) {
-  return array.map((item) => item);
+  if (Array.isArray(array)) {
+    return array.map((item) => item);
+  } else "Não foi passado um array como argumento.";
 }

@@ -11,14 +11,18 @@ const listaDuplicatas1 = [1, 2, 2, 3, 3, 4, 5, 6, 7, 4, 5, 6, 6, 8, 10];
 const listaDuplicatas2 = [10, 20, 20, 30, 30, 40, 50, 60, 70, 40, 50, 60, 60, 80, 100];
 
 function somaArraysSemDuplicatas(primeiroArray, segundoArray) {
-  const arraysSomados = primeiroArray
-    .concat(segundoArray)
-    .filter((elemento, indice, lista) => {
-      if (lista.indexOf(elemento) == indice) {
-        return elemento;
-      }
-    });
-  return arraysSomados;
+  if (Array.isArray(primeiroArray) && Array.isArray(segundoArray)) {
+    const arraysSomados = primeiroArray
+      .concat(segundoArray)
+      .filter((elemento, indice, lista) => {
+        if (lista.indexOf(elemento) == indice) {
+          return elemento;
+        }
+      });
+    return arraysSomados;
+  }
+  return "Os argumentos dessa função não foram satisfeitos, é necessário entrar com dois arrays";
 }
-
-alert(somaArraysSemDuplicatas(listaDuplicatas1, listaDuplicatas2));
+alert("Primeiro array: \n" + listaDuplicatas1);
+alert("Segundo array: \n" + listaDuplicatas2);
+alert("Arrays somados sem as duplicatas: \n" + somaArraysSemDuplicatas(listaDuplicatas1, listaDuplicatas2));
